@@ -1,0 +1,365 @@
+
+/* ==============================
+   MAIN NAVBAR
+============================== */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  padding: 22px 7%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* LOGO */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #17251e;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: #1d4935;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.logo-dot {
+  color: #b38b52;
+  margin-left: -9px;
+}
+
+/* NAV LINKS */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-links > a {
+  position: relative;
+  color: #566158;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.navbar-links > a:hover,
+.navbar-links > a.active-link {
+  color: #b18a55;
+}
+
+.navbar-links > a::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #b38b52;
+  transition: width 0.3s ease;
+}
+
+.navbar-links > a:hover::after,
+.navbar-links > a.active-link::after {
+  width: 100%;
+}
+
+/* WISHLIST COUNT */
+
+.wishlist-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  margin-left: 6px;
+  border-radius: 50px;
+  background: #1d4935;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* DESKTOP ACTIONS */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+/* ACCOUNT DROPDOWN */
+
+.account-menu {
+  position: relative;
+}
+
+.account-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 17px;
+  border: 1px solid #dce5df;
+  border-radius: 4px;
+  background: transparent;
+  color: #1d4935;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.account-btn:hover {
+  background: #1d4935;
+  color: #ffffff;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 190px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #e8eee9;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  display: grid;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  z-index: 100;
+}
+
+.account-menu:hover .account-dropdown,
+.account-menu:focus-within .account-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.account-dropdown a {
+  padding: 12px;
+  color: #1d4935;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.account-dropdown a:hover {
+  background: #f0f5f1;
+}
+
+/* CTA */
+
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: #1d4935;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+.navbar-cta:hover {
+  background: #b38b52;
+  transform: translateY(-2px);
+}
+
+/* HAMBURGER */
+
+.navbar-menu {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #17251e;
+  cursor: pointer;
+}
+
+/* MOBILE ACCOUNT - HIDDEN ON DESKTOP */
+
+.mobile-account-links {
+  display: none;
+}
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 18px 4%;
+  }
+
+  .navbar-links {
+    gap: 16px;
+  }
+
+  .navbar-links > a {
+    font-size: 12px;
+  }
+
+  .navbar-actions {
+    gap: 10px;
+  }
+
+  .navbar-cta {
+    padding: 12px 14px;
+  }
+
+  .account-btn {
+    padding: 11px 12px;
+  }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 850px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 23px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links > a {
+    font-size: 14px;
+  }
+
+  /* Hide desktop buttons */
+
+  .navbar-actions {
+    display: none;
+  }
+
+  /* Show hamburger */
+
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  /* Account buttons only when menu opens */
+
+  .mobile-account-links {
+    display: none;
+  }
+
+  .navbar-links.active .mobile-account-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid #e8eee9;
+  }
+
+  .mobile-account-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    height: 36px;
+    padding: 0 14px;
+    background: #1d4935;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s ease;
+  }
+
+  .mobile-account-links a:hover {
+    background: #b38b52;
+  }
+}
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 420px) {
+  .navbar-logo {
+    font-size: 19px;
+  }
+
+  .logo-icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .mobile-account-links a {
+    min-width: 85px;
+    height: 34px;
+    padding: 0 11px;
+    font-size: 11px;
+  }
+}

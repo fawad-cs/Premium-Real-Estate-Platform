@@ -1,0 +1,235 @@
+
+/* ==============================
+   SIGNUP PAGE
+============================== */
+
+.signup-page {
+  min-height: 750px;
+  padding: 130px 20px 80px;
+  background: #f4f5ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.signup-container {
+  width: 100%;
+  max-width: 510px;
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 50px 55px;
+  border: 1px solid #e9eae4;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================
+   HEADING
+============================== */
+
+.signup-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.signup-heading span {
+  color: #b18a55;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.signup-heading h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 18px 0;
+  color: #1d2b22;
+}
+
+.signup-heading h1 em {
+  color: #b18a55;
+}
+
+.signup-heading p {
+  color: #858b83;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   FORM
+============================== */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form > label {
+  color: #26372c;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+
+.signup-form > input,
+.signup-password-input input {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin-bottom: 22px;
+  border: 1px solid #e3e6df;
+  outline: none;
+  background: #fafaf7;
+  color: #1d2b22;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.signup-form input:focus {
+  border-color: #1d4935;
+  box-shadow: 0 0 0 3px rgba(29, 73, 53, 0.07);
+}
+
+.signup-form input::placeholder {
+  color: #a2a79f;
+}
+
+/* ==============================
+   PASSWORD INPUT
+============================== */
+
+.signup-password-input {
+  position: relative;
+}
+
+.signup-password-input input {
+  padding-right: 48px;
+}
+
+.signup-password-input button {
+  position: absolute;
+  right: 14px;
+  top: 15px;
+  border: none;
+  background: transparent;
+  color: #777f77;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.signup-password-input button:hover {
+  color: #1d4935;
+}
+
+/* ==============================
+   SUBMIT BUTTON
+============================== */
+
+.signup-submit {
+  width: 100%;
+  height: 54px;
+  margin-top: 5px;
+  background: #1d4935;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-submit:hover {
+  background: #b18a55;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   MESSAGE
+============================== */
+
+.signup-message {
+  padding: 12px;
+  margin-top: 18px;
+  background: #f0f5f1;
+  border-left: 3px solid #1d4935;
+  color: #1d4935;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==============================
+   LOGIN LINK
+============================== */
+
+.signup-login {
+  text-align: center;
+  margin-top: 26px;
+  color: #858b83;
+  font-size: 13px;
+}
+
+.signup-login a {
+  color: #1d4935;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signup-login a:hover {
+  color: #b18a55;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 550px) {
+  .signup-page {
+    min-height: 650px;
+    padding: 110px 16px 60px;
+  }
+
+  .signup-container {
+    padding: 35px 22px;
+  }
+
+  .signup-heading {
+    margin-bottom: 28px;
+  }
+
+  .signup-heading h1 {
+    font-size: 30px;
+  }
+
+  .signup-heading p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .signup-container {
+    padding: 30px 17px;
+  }
+
+  .signup-heading h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,143 @@
+.property-categories {
+  padding: 110px 7%;
+  background: #ffffff;
+}
+
+.categories-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.categories-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.categories-heading > span {
+  display: block;
+  margin-bottom: 17px;
+  color: #b18a55;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.categories-heading h2 {
+  color: #1d3025;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.categories-heading h2 span {
+  color: #b18a55;
+}
+
+.categories-heading p {
+  max-width: 480px;
+  margin: 17px auto 0;
+  color: #858b85;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  padding: 30px 25px;
+  color: #1d3025;
+  background: #f8f8f5;
+  border: 1px solid #eeeee9;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.category-card:hover {
+  background: #1d4935;
+  color: #ffffff;
+  transform: translateY(-7px);
+  border-color: #1d4935;
+}
+
+.category-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #b18a55;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+.category-card:hover .category-icon {
+  color: #1d4935;
+  transform: rotate(-8deg);
+}
+
+.category-info {
+  margin-top: 30px;
+}
+
+.category-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.category-info span {
+  display: block;
+  margin-top: 9px;
+  color: #939991;
+  font-size: 12px;
+}
+
+.category-card:hover .category-info span {
+  color: #d5dcd6;
+}
+
+.category-arrow {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  color: #b18a55;
+  transition: 0.3s ease;
+}
+
+.category-card:hover .category-arrow {
+  color: #ffffff;
+  transform: translate(4px, -4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .property-categories {
+    padding: 80px 6%;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    min-height: 190px;
+  }
+
+  .categories-heading h2 {
+    font-size: 32px;
+  }
+}

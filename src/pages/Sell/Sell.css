@@ -1,0 +1,186 @@
+
+.sell-page {
+  background: #f8f9f6;
+  min-height: 100vh;
+}
+
+.sell-hero {
+  background: #183c2c;
+  color: white;
+  text-align: center;
+  padding: 135px 20px 95px;
+}
+
+.sell-hero span,
+.sell-info > span {
+  color: #c3a477;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.sell-hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.sell-hero h1 strong {
+  color: #c3a477;
+}
+
+.sell-hero p {
+  color: #d0d9d2;
+  max-width: 550px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.sell-content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 90px 25px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 65px;
+  align-items: start;
+}
+
+.sell-info h2 {
+  color: #183c2c;
+  font-size: 38px;
+  margin: 18px 0;
+}
+
+.sell-info > p {
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.sell-benefit {
+  display: flex;
+  gap: 15px;
+  margin: 28px 0;
+}
+
+.sell-benefit > svg {
+  color: #b18a55;
+  flex-shrink: 0;
+}
+
+.sell-benefit h3 {
+  color: #183c2c;
+  margin-bottom: 7px;
+}
+
+.sell-benefit p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.sell-form {
+  background: white;
+  padding: 40px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+}
+
+.sell-form h2 {
+  color: #183c2c;
+  font-size: 28px;
+}
+
+.sell-form > p {
+  color: #888;
+  margin: 10px 0 30px;
+}
+
+.sell-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.sell-input-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #183c2c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sell-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5e8e2;
+  padding: 0 13px;
+  height: 50px;
+  color: #b18a55;
+}
+
+.sell-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.sell-input-grid select,
+.sell-input-grid textarea {
+  width: 100%;
+  border: 1px solid #e5e8e2;
+  padding: 14px;
+  outline: none;
+  font-family: inherit;
+  background: white;
+}
+
+.sell-full-width {
+  grid-column: 1 / -1;
+}
+
+.sell-input-grid textarea {
+  resize: vertical;
+}
+
+.sell-form button {
+  margin-top: 25px;
+  padding: 16px 25px;
+  background: #183c2c;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sell-form button:hover {
+  background: #b18a55;
+}
+
+@media (max-width: 850px) {
+  .sell-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .sell-input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-form {
+    padding: 25px 18px;
+  }
+
+  .sell-full-width {
+    grid-column: auto;
+  }
+}

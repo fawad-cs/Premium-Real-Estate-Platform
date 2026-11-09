@@ -1,0 +1,110 @@
+.statistics {
+  padding: 100px 7%;
+  background: #1d4935;
+  color: #ffffff;
+}
+
+.statistics-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.statistics-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.statistics-heading > span {
+  color: #d5b889;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.statistics-heading h2 {
+  margin-top: 18px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  color: #d5b889;
+  border: 1px solid rgba(213, 184, 137, 0.4);
+  border-radius: 50%;
+}
+
+.stat-card h3 {
+  margin-top: 25px;
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .statistics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-card:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+@media (max-width: 500px) {
+  .statistics {
+    padding: 75px 6%;
+  }
+
+  .statistics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card {
+    padding: 28px 10px;
+  }
+
+  .stat-card h3 {
+    font-size: 32px;
+  }
+
+  .stat-card p {
+    font-size: 10px;
+  }
+}

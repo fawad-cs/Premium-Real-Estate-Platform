@@ -1,0 +1,275 @@
+
+/* ==============================
+   LOGIN PAGE
+============================== */
+
+.login-page {
+  min-height: 750px;
+  padding: 130px 20px 80px;
+  background: #f4f5ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   LOGIN CONTAINER
+============================== */
+
+.login-container {
+  width: 100%;
+  max-width: 510px;
+  box-sizing: border-box;
+  background: #ffffff;
+  padding: 55px;
+  border: 1px solid #e9eae4;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================
+   HEADING
+============================== */
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-heading span {
+  color: #b18a55;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.login-heading h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 400;
+  margin: 18px 0;
+  color: #1d2b22;
+}
+
+.login-heading h1 em {
+  color: #b18a55;
+}
+
+.login-heading p {
+  color: #858b83;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   LOGIN FORM
+============================== */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > label:not(.login-remember),
+.login-password-label label {
+  color: #26372c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* INPUTS */
+
+.login-form > input,
+.login-password-input input {
+  width: 100%;
+  height: 52px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 10px 0 25px;
+  border: 1px solid #e3e6df;
+  outline: none;
+  background: #fafaf7;
+  color: #1d2b22;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #1d4935;
+  box-shadow: 0 0 0 3px rgba(29, 73, 53, 0.07);
+}
+
+.login-form input::placeholder {
+  color: #a2a79f;
+}
+
+/* ==============================
+   PASSWORD LABEL
+============================== */
+
+.login-password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-password-label a,
+.login-register a {
+  color: #1d4935;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-password-label a:hover,
+.login-register a:hover {
+  color: #b18a55;
+}
+
+/* ==============================
+   PASSWORD INPUT
+============================== */
+
+.login-password-input {
+  position: relative;
+}
+
+.login-password-input input {
+  padding-right: 50px;
+}
+
+.login-password-input button {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #777f77;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.login-password-input button:hover {
+  color: #1d4935;
+}
+
+/* ==============================
+   REMEMBER ME
+============================== */
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #777f77;
+  font-size: 13px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.login-remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: #1d4935;
+  cursor: pointer;
+}
+
+/* ==============================
+   SUBMIT BUTTON
+============================== */
+
+.login-submit {
+  width: 100%;
+  height: 54px;
+  background: #1d4935;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.login-submit:hover {
+  background: #b18a55;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   MESSAGE
+============================== */
+
+.login-message {
+  padding: 12px;
+  margin-top: 18px;
+  background: #f0f5f1;
+  border-left: 3px solid #1d4935;
+  color: #1d4935;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==============================
+   REGISTER
+============================== */
+
+.login-register {
+  text-align: center;
+  margin-top: 28px;
+  color: #858b83;
+  font-size: 13px;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 550px) {
+  .login-page {
+    min-height: 650px;
+    padding: 110px 16px 60px;
+  }
+
+  .login-container {
+    padding: 35px 22px;
+  }
+
+  .login-heading {
+    margin-bottom: 30px;
+  }
+
+  .login-heading h1 {
+    font-size: 31px;
+  }
+
+  .login-heading p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-container {
+    padding: 30px 17px;
+  }
+
+  .login-heading h1 {
+    font-size: 27px;
+  }
+
+  .login-password-label a {
+    font-size: 11px;
+  }
+}
